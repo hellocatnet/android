@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- 일반 -->
+    <dimen name="no_padding">0dp</dimen>
+    <dimen name="radius_normal">5dp</dimen>
+    
+    <!-- 레이아웃 -->
+    <dimen name="offset_mini">4dp</dimen>
+    <dimen name="offset_small">7dp</dimen>
+    <dimen name="offset_normal">14dp</dimen>
+    <dimen name="offset_medium">21dp</dimen>
+    <dimen name="offset_large">28dp</dimen>
+    <dimen name="offset_big">35dp</dimen>
+    <dimen name="offset_huge">42dp</dimen>
+    <dimen name="offset_profile_menu">40dp</dimen>
+
+    <!-- 액티비티  -->
+    <dimen name="activity_padding">14dp</dimen>
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="activity_vertical_margin">14dp</dimen>
+
+    <!-- 텍스트 -->
+    <dimen name="text_size_big">22sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_mini">12sp</dimen>
+
+    <!-- 입력 필드 -->
+    <dimen name="input_caption_text_size">16sp</dimen>
+    <dimen name="input_text_size">16sp</dimen>
+    <dimen name="input_vertical_padding">10dp</dimen>
+    <dimen name="input_horizontal_padding">10dp</dimen>
+    <dimen name="input_vertical_offset">7dp</dimen>
+
+    <!-- 버튼 -->
+    <dimen name="button_text_size">15sp</dimen>
+    <dimen name="button_height">42dp</dimen>
+    <dimen name="button_height_input">39dp</dimen>
+    <dimen name="button_height_small">34dp</dimen>
+    <dimen name="button_height_mini">24dp</dimen>
+    <dimen name="button_vertical_padding">0dp</dimen>
+    <dimen name="button_horizontal_padding">14dp</dimen>
+    <dimen name="button_vertical_margin">14dp</dimen>
+
+    <!-- 리스트 뷰 -->
+    <dimen name="list_view_padding">7dp</dimen>
+    <dimen name="list_view_devider_height">1dp</dimen>
+    <dimen name="list_view_item_padding">7dp</dimen>
+    <dimen name="list_view_item_picture_width">45dp</dimen>
+    <dimen name="list_view_item_picture_height">45dp</dimen>
+    <dimen name="list_view_item_menu_offset">20dp</dimen>
+    
+    <!-- 리스트 뷰 > 카드 형태 -->
+    <dimen name="list_card_radius">3dp</dimen>
+    <dimen name="list_card_padding">7dp</dimen>
+    <dimen name="list_card_devider_height">7dp</dimen>
+    <dimen name="list_card_padding_horizontal">0dp</dimen>
+    <dimen name="list_card_button_padding_vertical">7dp</dimen>
+    
+</resources>

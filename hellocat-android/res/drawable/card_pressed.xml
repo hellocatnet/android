@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+
+            <!-- The border color -->
+            <solid android:color="@color/list_card_item_pressed_border" />
+
+            <corners android:radius="@dimen/list_card_radius" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
+        <shape>
+
+            <!-- The fill color -->
+            <solid android:color="@color/list_card_item_pressed" />
+
+            <corners android:radius="@dimen/list_card_radius" />
+        </shape>
+    </item>
+
+</layer-list>

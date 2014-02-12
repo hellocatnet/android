@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://www.mindfreakerstuff.com/2012/09/50-useful-android-custom-button-style-set-1/ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <corners android:radius="3dip" />
+
+            <stroke android:width="1dip" android:color="#A8A8A8" />
+
+            <gradient android:angle="-90" android:endColor="#C3C3C3" android:startColor="#C3C3C3" />
+        </shape></item>
+    <item android:state_focused="true"><shape android:shape="rectangle">
+            <corners android:radius="3dip" />
+
+            <stroke android:width="1dip" android:color="#b7b9ac" />
+
+            <solid android:color="#d3d8c2" />
+        </shape></item>
+    <item><shape android:shape="rectangle">
+            <corners android:radius="3dip" />
+
+            <stroke android:width="1dip" android:color="#C3C3C3" />
+
+            <gradient android:angle="-90" android:endColor="#DEDEDE" android:startColor="#fefefe" />
+        </shape></item>
+
+</selector>

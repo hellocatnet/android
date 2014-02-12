@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_list_view"
+    android:orientation="horizontal" >
+
+    <!-- 도움말 -->
+
+    <TextView
+        android:id="@+id/tvArticleListHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/activity_padding"
+        android:drawablePadding="@dimen/offset_normal"
+        android:drawableTop="@drawable/icon_info_balloon_basic_green"
+        android:gravity="center"
+        android:text="@string/no_registered_article"
+        android:visibility="gone" />
+
+    <!-- 목록 정보 -->
+
+    <LinearLayout
+        android:id="@+id/loArticleListInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_view_item_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <!-- 라벨 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:textColor="@color/silver" />
+
+        <!-- 데이터 수 -->
+
+        <TextView
+            android:id="@+id/tvArticleListInfoValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/offset_mini"
+            android:text="@string/blank"
+            android:textColor="@color/list_view_item_body_date" />
+    </LinearLayout>
+
+    <!-- 메세지 등록 폼 -->
+
+    <LinearLayout
+        android:id="@+id/loArticleListForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/list_view_form_background_blue"
+        android:orientation="horizontal"
+        android:padding="@dimen/offset_small" >
+
+        <!-- 메세지 입력 필드 -->
+
+        <EditText
+            android:id="@+id/etArticleListContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_round_dark"
+            android:hint="@string/input_content" />
+
+        <!-- 메세지 전송 버튼 -->
+
+        <Button
+            android:id="@+id/btArticleListSubmit"
+            style="@style/buttonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_input"
+            android:layout_marginLeft="@dimen/offset_small"
+            android:contentDescription="@string/blank"
+            android:text="@string/send" />
+    </LinearLayout>
+
+    <!-- 데이터 목록 -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lvArticleList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/loArticleListForm"
+        android:layout_below="@id/loArticleListInfo"
+        android:layout_marginLeft="@dimen/list_view_padding"
+        android:layout_marginRight="@dimen/list_view_padding"
+        android:divider="@color/list_card_divider"
+        android:dividerHeight="@dimen/list_card_devider_height"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:focusable="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@drawable/selector_transparent"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

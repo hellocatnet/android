@@ -1,0 +1,31 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_padding" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_round_orange"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/blank" />
+
+        <Button
+            android:id="@+id/btProfileSubmit"
+            style="@style/buttonPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/button_vertical_margin"
+            android:text="@string/modify_long" />
+    </LinearLayout>
+
+</ScrollView>

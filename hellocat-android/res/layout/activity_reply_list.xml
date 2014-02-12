@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_list_view"
+    android:gravity="center_horizontal" >
+
+    <!-- 리뷰 상세 -->
+
+    <RelativeLayout
+        android:id="@+id/loArticleDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_view_item_dark"
+        android:padding="@dimen/activity_padding" >
+
+        <!-- 사진 -->
+
+        <ImageView
+            android:id="@+id/ivArticleUserPicture"
+            android:layout_width="@dimen/list_view_item_picture_width"
+            android:layout_height="@dimen/list_view_item_picture_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:background="@drawable/bg_border_white"
+            android:contentDescription="@string/blank"
+            android:src="@drawable/user_picture_round" />
+
+        <!-- 이름 -->
+
+        <TextView
+            android:id="@+id/tvArticleUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivArticleUserPicture"
+            android:text="@string/blank"
+            android:textColor="@color/list_view_item_body_name_reverse" />
+
+        <!-- 날짜 -->
+
+        <TextView
+            android:id="@+id/tvArticleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/blank"
+            android:textColor="@color/list_view_item_body_date"
+            android:textSize="@dimen/text_size_mini" />
+
+        <!-- 내용 -->
+
+        <TextView
+            android:id="@+id/tvArticleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvArticleUserName"
+            android:layout_toRightOf="@id/ivArticleUserPicture"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/blank"
+            android:textColor="@color/list_view_item_body_content_reverse" />
+    </RelativeLayout>
+
+    <!-- 도움말 -->
+
+    <TextView
+        android:id="@+id/tvReplyListHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loArticleDetail"
+        android:drawableLeft="@drawable/icon_info_balloon_basic_green"
+        android:drawablePadding="@dimen/offset_small"
+        android:gravity="center_vertical"
+        android:padding="@dimen/offset_large"
+        android:text="@string/no_registered_replies"
+        android:visibility="gone" />
+
+    <!-- 메세지 등록 폼 -->
+
+    <LinearLayout
+        android:id="@+id/loReplyListForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/list_view_form_background_blue"
+        android:orientation="horizontal"
+        android:padding="@dimen/offset_small" >
+
+        <!-- 메세지 입력 필드 -->
+
+        <EditText
+            android:id="@+id/etReplyListContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_round_dark"
+            android:hint="@string/input_reply" />
+
+        <!-- 메세지 전송 버튼 -->
+
+        <Button
+            android:id="@+id/btReplyListSubmit"
+            style="@style/buttonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_input"
+            android:layout_marginLeft="@dimen/offset_small"
+            android:contentDescription="@string/blank"
+            android:text="@string/send" />
+    </LinearLayout>
+
+    <!-- 데이터 목록 -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lvReply"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/loReplyListForm"
+        android:layout_below="@id/loArticleDetail"
+        android:divider="@color/list_view_divider"
+        android:dividerHeight="@dimen/list_view_devider_height"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@drawable/selector_transparent"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

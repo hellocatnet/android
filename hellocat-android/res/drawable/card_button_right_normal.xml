@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+
+            <!-- The border color -->
+            <solid android:color="@color/list_card_item_normal_border" />
+
+            <corners android:bottomRightRadius="@dimen/list_card_radius" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1dp"
+        android:left="0dp"
+        android:right="1dp"
+        android:top="0dp">
+        <shape>
+
+            <!-- The border color -->
+            <solid android:color="@color/list_card_item_button_border" />
+
+            <corners android:bottomRightRadius="@dimen/list_card_radius" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
+        <shape>
+
+            <!-- The fill color -->
+            <solid android:color="@color/list_card_item_button_normal" />
+
+            <corners android:bottomRightRadius="@dimen/list_card_radius" />
+
+            <padding
+                android:bottom="@dimen/list_card_button_padding_vertical"
+                android:left="@dimen/list_card_padding_horizontal"
+                android:right="@dimen/list_card_padding_horizontal"
+                android:top="@dimen/list_card_button_padding_vertical" />
+        </shape>
+    </item>
+
+</layer-list>

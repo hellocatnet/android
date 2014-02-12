@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_background"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 로딩 -->
+
+    <LinearLayout
+        android:id="@+id/loLoginLoading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_small"
+            android:text="@string/wait_a_second"
+            android:textColor="@color/selector_black_title" />
+    </LinearLayout>
+
+    <!-- 레이아웃 -->
+
+    <ScrollView
+        android:id="@+id/svLoginView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:paddingLeft="@dimen/offset_huge"
+                android:paddingRight="@dimen/offset_huge"
+                android:paddingTop="0dp" >
+
+                <!-- 로고 -->
+
+                <ImageView
+                    android:id="@+id/ivLoginLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/blank"
+                    android:src="@drawable/logo" />
+
+                <!-- 이메일 입력 필드 -->
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_normal"
+                    android:background="@drawable/edittext_round_orange"
+                    android:hint="@string/email"
+                    android:imeActionLabel="@string/next"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/blank" />
+
+                <!-- 비밀번호 입력 필드 -->
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_vertical_offset"
+                    android:background="@drawable/edittext_round_orange"
+                    android:hint="@string/password"
+                    android:imeActionLabel="@string/login"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/blank" />
+
+                <!-- 이메일 로그인 버튼 -->
+
+                <Button
+                    android:id="@+id/btEmailLogin"
+                    style="@style/buttonWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/input_vertical_offset"
+                    android:text="@string/login" />
+
+                <!-- 페이스북 로그인 버튼 -->
+
+                <com.facebook.widget.LoginButton
+                    xmlns:fb="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btFacebookLogin"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/offset_normal"
+                    fb:login_text="@string/facebook"
+                    fb:logout_text="@string/facebook" />
+
+                <!-- 구글 플러스 로그인 버튼 -->
+
+                <Button
+                    android:id="@+id/btnGoogleLogin"
+                    android:layout_width="157dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/offset_mini"
+                    android:background="@drawable/button_google_plus"
+                    android:drawableStart="@drawable/icon_google_plus_32"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/offset_small"
+                    android:paddingRight="@dimen/offset_small"
+                    android:text="@string/google_plus" />
+            </LinearLayout>
+
+            <!-- 가로선 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/activity_padding"
+                android:layout_marginRight="@dimen/activity_padding"
+                android:layout_marginTop="@dimen/offset_large"
+                android:background="#cccccc"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/loLoginFooter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/offset_normal"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <!-- 회원 가입 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvJoinTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/create_an_account"
+                        android:textColor="@color/selector_black_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvJoinDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/if_you_are_a_new_user_create_an_account"
+                        android:textColor="@color/selector_black_content"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <!-- 비밀번호 찾기 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvFindPasswordTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/search_password"
+                        android:textColor="@color/selector_black_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFindPasswordDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/fogot_password"
+                        android:textColor="@color/selector_black_content"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

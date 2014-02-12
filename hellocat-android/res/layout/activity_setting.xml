@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_background" >
+
+    <LinearLayout
+        android:id="@+id/loSettingBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 로그 아웃 -->
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/buttonGrid"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_power_32_black"
+            android:paddingTop="20dp"
+            android:text="@string/logout"
+            android:textStyle="bold" />
+
+        <!-- 계정 삭제 -->
+
+        <Button
+            android:id="@+id/btnSecede"
+            style="@style/buttonGrid"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_cross_32_black"
+            android:paddingTop="20dp"
+            android:text="@string/delete_my_account"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/loSettingBottom" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_medium"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 사진 -->
+
+            <ImageView
+                android:id="@+id/ivUserPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border_picture"
+                android:contentDescription="@string/blank"
+                android:padding="6dp"
+                android:src="@drawable/user_picture" />
+
+            <!-- 이름 -->
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_vertical_margin"
+                android:text="@string/blank"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
+
+            <!-- 이메일 -->
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank"
+                android:textColor="@color/green"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_vertical_margin"
+                android:orientation="vertical" >
+
+                <!-- 프로필 수정 버튼 -->
+
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    style="@style/buttonPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_small"
+                    android:text="@string/edit_profile" />
+
+                <!-- 사진 변경 버튼 -->
+
+                <Button
+                    android:id="@+id/btnChangePhoto"
+                    style="@style/buttonSuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_small"
+                    android:layout_marginTop="@dimen/input_vertical_offset"
+                    android:text="@string/change_photo" />
+
+                <!-- 비밀번호 변경 버튼 -->
+
+                <Button
+                    android:id="@+id/btnChangePassword"
+                    style="@style/buttonDanger"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_small"
+                    android:layout_marginTop="@dimen/input_vertical_offset"
+                    android:text="@string/change_password"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
